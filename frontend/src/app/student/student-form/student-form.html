@@ -1,0 +1,8 @@
+<h1 >Student Form</h1>
+<form >
+    <input type="name" placeholder="Name" [(ngModel)]="studentService.selectedStudent.name" name="name" required/>
+    <input type="email" placeholder="Email" [(ngModel)]="studentService.selectedStudent.email" name="email" required/>
+    <input type="number" placeholder="Age" [(ngModel)]="studentService.selectedStudent.age" name="age" required/>
+    <button type="submit" (click)="save()">{{ studentService.selectedStudent.id > 0 ? 'Update Student' : 'Add Student' }}
+    </button>
+  </form>
