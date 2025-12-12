@@ -6,4 +6,7 @@ export class CreateStudentDto {
       
         @ApiProperty()
         email: string;
+
+        @ApiProperty({ required: false })
+        age?: number;
 }

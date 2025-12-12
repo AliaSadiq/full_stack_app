@@ -11,7 +11,9 @@ export class StudentsService {
   }
 
   findAll() {
-    return this.prisma.student.findMany();
+    return this.prisma.student.findMany(
+      { orderBy: { id: 'asc' } }
+    );
   }
 
   findOne(id: number) {
